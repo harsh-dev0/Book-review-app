@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 //Importing Routes
 const authRoutes = require('./routes/auth');
 const bookRoutes = require('./routes/book');
+const reviewRoutes = require('./routes/review');
 dotenv.config();
 const app = express();
 
@@ -18,7 +19,7 @@ connectDB();
 //routes
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
-
+app.use('/api/reviews', reviewRoutes);
 app.get('/', (req, res) => {
   res.send('Book Review API is running');
 });
