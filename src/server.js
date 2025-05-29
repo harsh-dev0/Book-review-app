@@ -7,6 +7,8 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const bookRoutes = require('./routes/book');
 const reviewRoutes = require('./routes/review');
+const searchRoutes = require('./routes/search');
+
 dotenv.config();
 const app = express();
 
@@ -20,6 +22,7 @@ connectDB();
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/reviews', reviewRoutes);
+app.use('/api/search', searchRoutes);
 app.get('/', (req, res) => {
   res.send('Book Review API is running');
 });
