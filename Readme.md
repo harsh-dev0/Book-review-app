@@ -2,6 +2,10 @@
 
 A RESTful API for a book review system built with Node.js, Express, and MongoDB.
 
+## 🔗 Deployed API
+
+Base URL: [https://book-review-app-92fq.onrender.com/](https://book-review-app-92fq.onrender.com/)
+
 ## Features
 
 - User authentication with JWT
